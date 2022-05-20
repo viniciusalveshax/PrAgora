@@ -7,15 +7,19 @@
     <tr>
         <th>Título</th>
         <th>Data de criação</th>
+        <th>Editar</th>
     </tr>
 
     <?php foreach ($topics as $topic): ?>
     <tr>
         <td>
-            <?= $this->Html->link($topic->title, ['action' => 'view', $topic->slug]) ?>
+		<?= $this->Html->link($topic->title, ['action' => 'view', $topic->slug]) ?>
         </td>
         <td>
-            <?= $topic->created->format(DATE_RFC850) ?>
+		<?= $topic->created->format(DATE_RFC850) ?>
+        </td>
+        <td>
+		<?= $this->Html->link('Editar', ['action' => 'edit', $topic->slug]) ?>        
         </td>
     </tr>
     <?php endforeach; ?>
