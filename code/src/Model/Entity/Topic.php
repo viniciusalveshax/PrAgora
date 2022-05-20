@@ -1,4 +1,7 @@
 <?php
+
+// code inspired by https://book.cakephp.org/4/en/quickstart.html
+
 // src/Model/Entity/Topic.php
 namespace App\Model\Entity;
 

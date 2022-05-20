@@ -1,5 +1,7 @@
 <?php
 
+// code inspired by https://book.cakephp.org/4/en/quickstart.html
+
 // src/Controller/ArticlesController.php
 
 namespace App\Controller;

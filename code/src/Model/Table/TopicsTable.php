@@ -1,4 +1,7 @@
 <?php
+
+// code inspired by https://book.cakephp.org/4/en/quickstart.html
+
 // src/Model/Table/TopicsTable.php
 namespace App\Model\Table;
 
