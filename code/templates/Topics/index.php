@@ -20,3 +20,5 @@
     </tr>
     <?php endforeach; ?>
 </table>
+
+<?= $this->Html->link('Criar tópico', ['action' => 'add']) ?>
