@@ -1,4 +1,4 @@
-<!-- https://book.cakephp.org/4/en/quickstart.html -->
+<!-- Inspirado por https://book.cakephp.org/4/en/quickstart.html -->
 
 <!-- File: templates/Topics/index.php -->
 

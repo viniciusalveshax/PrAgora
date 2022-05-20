@@ -1,3 +1,5 @@
+<!-- Inspirado por https://book.cakephp.org/4/en/quickstart.html -->
+
 <!-- File: templates/Topics/add.php -->
 
 <h1>Criar tópico</h1>
