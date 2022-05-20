@@ -47,6 +47,22 @@ class TopicsController extends AppController {
 		    $this->Flash->error(__('Não foi possível criar seu tópico.'));
 		}
 		$this->set('topic', $topic);
+	}
+	
+	
+	public function edit($slug) {
+		$topic = $this->Topics->findBySlug($slug)->firstOrFail();
+
+		if ($this->request->is(['post', 'put'])) {
+			$this->Topics->patchEntity($topic, $this->request->getData());
+			if ($this->Topics->save($topic)) {
+			    $this->Flash->success(__('Seu tópico foi atualizado.'));
+			    return $this->redirect(['action' => 'index']);
+			}
+			$this->Flash->error(__('Não foi possível atualizar o tópico.'));
+		}
+
+		$this->set('topic', $topic);
 	}	
 
 }
