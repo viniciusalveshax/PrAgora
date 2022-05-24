@@ -64,5 +64,16 @@ class TopicsController extends AppController {
 
 		$this->set('topic', $topic);
 	}	
+	
+	public function delete($slug)
+	{
+		$this->request->allowMethod(['post', 'delete']);
+
+		$topic = $this->Topics->findBySlug($slug)->firstOrFail();
+		if ($this->Topics->delete($topic)) {
+			$this->Flash->success(__('O {0} tópico foi deletado.', $topic->title));
+			return $this->redirect(['action' => 'index']);
+		}
+	}	
 
 }

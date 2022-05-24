@@ -7,7 +7,7 @@
     <tr>
         <th>Título</th>
         <th>Data de criação</th>
-        <th>Editar</th>
+        <th>Ação</th>
     </tr>
 
     <?php foreach ($topics as $topic): ?>
@@ -20,6 +20,10 @@
         </td>
         <td>
 		<?= $this->Html->link('Editar', ['action' => 'edit', $topic->slug]) ?>        
+		<?= $this->Form->postLink('Deletar',
+                	['action' => 'delete', $topic->slug],
+                	['confirm' => 'Tem certeza?'])
+            	?>
         </td>
     </tr>
     <?php endforeach; ?>
