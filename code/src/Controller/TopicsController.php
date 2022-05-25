@@ -2,7 +2,7 @@
 
 // code inspired by https://book.cakephp.org/4/en/quickstart.html
 
-// src/Controller/ArticlesController.php
+// src/Controller/TopicsController.php
 
 namespace App\Controller;
 
