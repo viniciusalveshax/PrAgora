@@ -6,8 +6,6 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
-use Cake\Utility\Text;
-use Cake\Event\EventInterface;
 
 class Topic extends Entity
 {
@@ -17,13 +15,6 @@ class Topic extends Entity
 		'slug' => false,
 	];
     
-    
-	public function beforeSave(EventInterface $event, $entity, $options) {
-		if ($entity->isNew() && !$entity->slug) {
-			$sluggedTitle = Text::slug($entity->title);
-			// trim slug to maximum length defined in schema
-			$entity->slug = substr($sluggedTitle, 0, 191);
-		}
-	}
+
 }
 
