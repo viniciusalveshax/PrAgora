@@ -7,8 +7,9 @@
     echo $this->Form->create($topic);
     // Hard code the user for now.
     echo $this->Form->control('user_id', ['type' => 'hidden', 'value' => 1]);
-    echo $this->Form->control('title');
-    echo $this->Form->control('body', ['rows' => '3']);
+    echo $this->Form->control('title', ['label'=>'Título (min 10 letras)']);
+
+    echo $this->Form->control('body', ['rows' => '3', 'label'=>'Texto (min 10 letras)']);
     echo $this->Form->button(__('Criar tópico'));
     echo $this->Form->end();
 ?>
