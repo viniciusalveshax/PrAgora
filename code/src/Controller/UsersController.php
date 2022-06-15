@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Cake\Error\Debugger;
+//use Cake\Error\Debugger;
 
 /**
  * Users Controller
@@ -21,7 +21,7 @@ class UsersController extends AppController
 	{
 	    parent::beforeFilter($event);
 
-	    $this->Authentication->allowUnauthenticated(['login']);
+	    $this->Authentication->allowUnauthenticated(['login', 'add']);
 	}
 
     /**
@@ -122,7 +122,7 @@ class UsersController extends AppController
 	{
 	    $result = $this->Authentication->getResult();
 	    
-	    Debugger::dump($result);
+	    //Debugger::dump($result);
 	    
 	    // If the user is logged in send them away.
 	    if ($result->isValid()) {
